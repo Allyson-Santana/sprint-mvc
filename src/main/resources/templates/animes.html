@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Animes</title>
+    <style>
+        * th {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+<h1>Lista de Animes</h1>
+<br>
+
+    <div th:each="anime:${animes}">
+        <h4 th:text="${anime.nome}">Nome</h4>
+        <p th:text="${anime.status}">Status</p>
+        <p th:text="${anime.genero}">Gênero</p>
+        <hr>
+    </div>
+
+</body>
+</html>
